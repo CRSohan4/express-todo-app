@@ -1,8 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var database = require('./app/lib/database');
-var taskController = require('./app/task/taskController');
+// var database = require('./app/lib/database');
+// var taskController = require('./app/task/taskController');
 
 
 // Defining variables
@@ -20,20 +20,20 @@ app.get('/', (req, res) => {
     res.send('Hello World!!!');
 });
 
-// create Task
-app.post('/api/v1.0/task',taskController.createTask);
+// // create Task
+// app.post('/api/v1.0/task',taskController.createTask);
 
-// Get all task resource
-app.get('/api/v1.0/task',taskController.getTask);
+// // Get all task resource
+// app.get('/api/v1.0/task',taskController.getTask);
 
-// Get task by id
-app.get('/api/v1.0/task/id/:taskId',taskController.getTaskById);
+// // Get task by id
+// app.get('/api/v1.0/task/id/:taskId',taskController.getTaskById);
 
-// Delete task by id
-app.delete('/api/v1.0/task/id/:taskId',taskController.deleteTaskById);
+// // Delete task by id
+// app.delete('/api/v1.0/task/id/:taskId',taskController.deleteTaskById);
 
-// Update task status by id
-app.put('/api/v1.0/task/id/:taskId',taskController.updateTaskById);
+// // Update task status by id
+// app.put('/api/v1.0/task/id/:taskId',taskController.updateTaskById);
 
 
 
